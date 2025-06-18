@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "https://lab-14-mocha.vercel.app";
 
 export default async function handler(req, res) {
   const urls = ["/", "/blog", "/contacto"];
@@ -11,6 +11,5 @@ export default async function handler(req, res) {
 </urlset>`;
 
   res.setHeader("Content-Type", "text/xml");
-  res.write(sitemap);
-  res.end();
+  res.status(200).send(sitemap);
 }
