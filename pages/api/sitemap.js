@@ -10,6 +10,6 @@ export default async function handler(req, res) {
     .join("")}
 </urlset>`;
 
-  res.setHeader("Content-Type", "text/xml");
+  res.setHeader("Content-Type", "application/xml; charset=utf-8");
   res.status(200).send(sitemap);
 }
